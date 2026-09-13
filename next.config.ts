@@ -3,10 +3,7 @@ import type { NextConfig } from "next";
 const repositoryName =
   process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "haotian-visual-archive";
 const basePath = process.env.GITHUB_ACTIONS === "true" ? `/${repositoryName}` : "";
-const assetBaseUrl =
-  process.env.GITHUB_ACTIONS === "true"
-    ? "https://haotian-visual-archive.brawny-grass-1109.chatgpt.site"
-    : "";
+const assetBaseUrl = basePath;
 
 const nextConfig: NextConfig = {
   output: "export",
