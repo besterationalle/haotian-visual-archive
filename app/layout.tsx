@@ -7,10 +7,8 @@ const siteUrl =
   process.env.GITHUB_ACTIONS === "true"
     ? `https://besterationalle.github.io/${repositoryName}`
     : "https://haotian-visual-archive.brawny-grass-1109.chatgpt.site";
-const assetOrigin =
-  "https://haotian-visual-archive.brawny-grass-1109.chatgpt.site";
-const socialImageUrl = `${assetOrigin}/og.png`;
-const faviconUrl = `${assetOrigin}/favicon.svg`;
+const socialImageUrl = `${siteUrl}/og.png`;
+const faviconUrl = `${siteUrl}/favicon.svg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
