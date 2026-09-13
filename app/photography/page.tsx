@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import PhotographyView from "./PhotographyView";
 
-const photographySocialImage =
-  "https://haotian-visual-archive.brawny-grass-1109.chatgpt.site/images/photography/everyday-drink-shop.jpg";
+const repositoryName =
+  process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "haotian-visual-archive";
+const siteUrl =
+  process.env.GITHUB_ACTIONS === "true"
+    ? `https://besterationalle.github.io/${repositoryName}`
+    : "https://haotian-visual-archive.brawny-grass-1109.chatgpt.site";
+const photographySocialImage = `${siteUrl}/images/photography/everyday-drink-shop.jpg`;
 
 export const metadata: Metadata = {
   title: "Photography — Haotian Zheng",
